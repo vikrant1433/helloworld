@@ -1,0 +1,24 @@
+@(user: User)
+
+<!DOCTYPE html>
+<html>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        Name: @user.name <br/>
+        Age: @user.age
+
+        <ul>
+            @for( i <- 1 to user.age) {
+                @if(i % 2 == 0) {
+                    <li>Hi, @user.name.toUpperCase()</li>
+                } else{
+                    <li>Bye, @user.name</li>
+                }
+            }
+        </ul>
+
+    </body>
+</html>
